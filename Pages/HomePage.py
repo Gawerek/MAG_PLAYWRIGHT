@@ -8,6 +8,8 @@ class HomePage:
     scrollbarrs_link = 'text="Scrollbarrs"'
     scrollbarrs_selector = 'a[href="/scrollbars"]'
     dynamic_table_selector = 'a[href="/dynamictable"]'
+    verify_text_selector = 'a[href="/verifytext"]'
+    progress_bar_selector = 'a[href="/progressbar"]'
     url = 'http://uitestingplayground.com'
     def __init__(self, page):
         self.page = page
@@ -36,3 +38,9 @@ class HomePage:
             self.page.click(self.scrollbarrs_selector)
     def click_dynamic_table_link(self):
             self.page.click(self.dynamic_table_selector)
+
+    def click_verify_text_link(self):
+            self.page.click(self.verify_text_selector)
+
+    def click_progress_bar_link(self):
+            self.page.click(self.progress_bar_selector)
