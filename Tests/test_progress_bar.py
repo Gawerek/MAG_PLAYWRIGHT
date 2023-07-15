@@ -8,4 +8,4 @@ def test_class_attribute(page):
     progress_bar_page = ProgressBarPage(page)
     progress_bar_page.click_start_button()
     progress_bar_page.wait_for_value_on_bar()
-    progress_bar_page.stop_button_locator
+    progress_bar_page.stop_button_locator()

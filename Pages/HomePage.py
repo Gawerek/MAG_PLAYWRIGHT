@@ -1,5 +1,6 @@
 class HomePage:
     load_delay_link_selector = 'a[href="/loaddelay"]'
+    CLICK_LINK_TEXT = 'text=Click'
     dynamic_id_link_selector ='a[href="/dynamicid"]'
     hidden_layer_link_selector = 'a[href="/hiddenlayers"]'
     ajax_link_selector = 'a[href="/ajax"]'
@@ -30,6 +31,9 @@ class HomePage:
 
     def click_ajax_data_link(self):
         self.page.click(self.AJAX_DATA_LINK)
+
+    def click_click_link(self):
+        self.page.click(self.CLICK_LINK_TEXT)
 
     def click_classattr_link(self):
             self.page.click(self.classattr_selector)
