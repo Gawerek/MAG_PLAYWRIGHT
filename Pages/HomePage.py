@@ -11,6 +11,7 @@ class HomePage:
     dynamic_table_selector = 'a[href="/dynamictable"]'
     verify_text_selector = 'a[href="/verifytext"]'
     progress_bar_selector = 'a[href="/progressbar"]'
+    mouse_over_selector = 'a[href="/mouseover"]'
     url = 'http://uitestingplayground.com'
     def __init__(self, page):
         self.page = page
@@ -48,3 +49,6 @@ class HomePage:
 
     def click_progress_bar_link(self):
             self.page.click(self.progress_bar_selector)
+
+    def click_mouse_over_link(self):
+            self.page.click(self.mouse_over_selector)
