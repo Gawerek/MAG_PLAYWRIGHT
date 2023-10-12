@@ -1,3 +1,6 @@
+from playwright.sync_api import expect
+
+
 class ProgressBarPage:
     start_button_locator = "button:has-text(\"Start\")"
     stop_button_locator = "button:has-text(\"Stop\")"
@@ -13,9 +16,9 @@ class ProgressBarPage:
         button.click()
 
     def wait_for_value_on_bar(self):
-        self.page.wait_for_selector(self.progress_bar_selector)
-
+        self.page.locator(self.progress_bar_selector).wait_for()
 
     def click_stop_button(self):
-        button = self.page.click(self.stop_button_locator)
-        return button
+        self.page.click(self.stop_button_locator)
+
+

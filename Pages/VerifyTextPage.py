@@ -7,4 +7,4 @@ class VerifyTextPage:
     def is_welcome_text_present(self):
         locator = self.page.get_by_text("Welcome UserName!", exact=True)
         print(locator.text_content())
-        return expect(locator).to_contain_text("Welcome UserName!")
+        expect(locator).to_contain_text("Welcome UserName!")

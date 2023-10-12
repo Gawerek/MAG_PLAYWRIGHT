@@ -2,14 +2,14 @@ from playwright.sync_api import expect
 
 class MouseOverPage:
 
-    btn_locator ="text=Click me"
+    btn_locator_text ="Click me"
     result_locator = ".badge-light"
 
     def __init__(self, page):
         self.page = page
 
     def click_link_twice(self):
-        link = self.page.locator(self.btn_locator)
+        link = self.page.get_by_text(self.btn_locator_text)
         link.dblclick()
 
     def get_click_count(self):
